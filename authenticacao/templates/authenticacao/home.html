@@ -1,0 +1,50 @@
+{% extends "authenticacao/base.html" %}
+{% load static %}
+
+
+{% block title %}
+  Home 
+{% endblock title %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock head %}
+{% block conteudo %}
+  <div class="container">
+    <div class="row justify-content-center m-5">
+      <div class="col-6">
+        <h1 class="text-center text-success">Tela de login</h1>
+        <div class="card py-5 bg-dark">
+          <form action="{% url 'home' %}" method="post">{% csrf_token %}
+            <div class="form-floating p-2">
+              <input class='form-control' type="text" name="nome" id="nome" placeholder=" ">
+              <label for="nome">Nome </label>
+            </div>
+            <div class="form-floating p-2">
+              <input class='form-control' type="email" name="email" id="email" placeholder=" ">
+              <label for="email">Email </label>
+            </div>
+            <div class="form-floating p-2 ">
+              <input class='form-control' type="password" name="senha" id="senha" placeholder=" ">
+              <label for="senha">Senha </label>
+            </div>
+            <div class="text-center m-3">
+              <input class="btn btn-success" type="submit" value="enviar">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  {% if request.method == 'POST' %}
+    <p>Nome: {{ nome }}</p>
+    <p>E-mail: {{ email }}</p> 
+    <p>Senha: {{ senha }}</p> 
+  {% else %}  
+  {% for pessoa in pessoas %}
+    <p class="text-danger">Nome: {{ pessoa.nome }}, Email: {{ pessoa.email }}, Senha: {{ pessoa.senha }}</p>
+    <hr>
+  {% endfor %}
+  {% endif %}
+{% endblock conteudo %}

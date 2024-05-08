@@ -1,0 +1,14 @@
+{% extends "authenticacao/base.html" %}
+{% load static %}
+
+
+
+
+{% block conteudo %}
+    {% for pessoa in pessoas %}
+    <p>Nome:<span class="text-success m-3">{{ pessoa.nome }}</span></p>
+    <p>Senha:<span class="text-success m-3">{{ pessoa.senha }}</span></p>
+    <p>Email:<span class="text-success m-3">{{ pessoa.email }}</span></p>
+    <hr>
+    {% endfor %}  
+{% endblock conteudo %}
