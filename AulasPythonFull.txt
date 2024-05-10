@@ -1,0 +1,19 @@
+Django Básico
+
+
+7 - Enviando dados para o template 06/05/24
+8 - Acessando valores dentro do template 06/05/24
+9 - Programando dentro do template 06/05/24
+10 - Arquivos estáticos introdução 06/05/24
+11 - Exibindo arquivos estáticos 06/05/24
+12 - Template base 06/05/24
+13 - Parâmetro GET 06/05/24
+14 - Formulários GET 06/05/24
+
+
+
+
+
+
+
+

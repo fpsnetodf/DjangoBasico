@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Pessoa
+from .models import Pessoa, Cargo
 
 
 # Create your views here.
@@ -18,6 +18,12 @@ def home(request):
         return render(request, 'authenticacao/home.html', {'nome': nome, 'email': email, 'senha': senha})
 
 def listar(request):
-    pessoas = Pessoa.objects.filter(nome__startswith='Francisco')| Pessoa.objects.filter(email='bl@gmail.com')
+    # dados = Pessoa.objects.filter(senha = "Paulo1234")[0]
+    # adm = Cargo.objects.filter(id=1)[0]
+    # dados = Pessoa.objects.filter(nome__startswith="Bruno")[0]
+    # dados.cargo_id = adm
+    # dados.save() 
+    pessoas = Pessoa.objects.filter(cargo__pk = 2).filter(senha = "rcs1234") | Pessoa.objects.filter(nome__icontains = "alanna")
+    # pessoas = Pessoa.objects.filter(nome__startswith='Francisco')| Pessoa.objects.filter(email='bl@gmail.com')
     # pessoas.delete()
     return render (request, 'authenticacao/listar.html', {'pessoas': pessoas})
