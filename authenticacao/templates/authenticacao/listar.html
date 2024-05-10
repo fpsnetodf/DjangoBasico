@@ -9,7 +9,13 @@
     <p>Nome:<span class="text-success m-3">{{ pessoa.nome }}</span></p>
     <p>Senha:<span class="text-success m-3">{{ pessoa.senha }}</span></p>
     <p>Email:<span class="text-success m-3">{{ pessoa.email }}</span></p>
-    <p class="text-info">Cargo: {{ pessoa.cargo }}</p>
+    <p class="text-primary">Cargo: 
+        {% if pessoa.cargo_id == 1 %}
+            <span class="text-danger">{{ pessoa.cargo }}</span>
+        {% else %}
+            <span class="text-success">{{ pessoa.cargo }}</span>  
+        {% endif %}
+    </p>
     <hr>
     {% endfor %}  
 {% endblock conteudo %}

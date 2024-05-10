@@ -9,6 +9,24 @@ Django Básico
 12 - Template base 06/05/24
 13 - Parâmetro GET 06/05/24
 14 - Formulários GET 06/05/24
+16 - Requisição pra mesma url 10/05/24
+17 - Banco de Dados # 1 
+18 - Banco de Dados # 2
+19 - Banco de Dados # 3 
+20 - Banco de Dados # 4
+21 - Banco de Dados # 6
+22 - Banco de Dados # 7
+23 - Banco de Dados # 8
+24 - Banco de Dados # 9
+25 - Banco de Dados # 10
+26 - Banco de Dados # 11
+27 - Banco de Dados # 12
+28 - Banco de Dados # 13
+29 - Banco de Dados # 14
+30 - Banco de Dados # 15
+31 - Banco de Dados # 16
+32 - Banco de Dados # 17
+33 - Banco de Dados # 18
 
 
 
