@@ -27,6 +27,8 @@ Django Básico
 31 - Banco de Dados # 16
 32 - Banco de Dados # 17
 33 - Banco de Dados # 18
+34 - URLS dinâmicas
+
 
 
 
